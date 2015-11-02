@@ -1,0 +1,8 @@
+<h1>Messages:</h1>
+
+
+<ul class="list-group col-sm-5">
+ <% @messages.each do |message| %>
+ <li class="list-group-item"><%= link_to message.body, message_path(message) %></li><br>
+ <% end %>
+</ul>

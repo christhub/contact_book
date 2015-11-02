@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TextMachine</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/messages">Messages</a></li>
+          <li><a href="/messages/new">New SMS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <% if notice %>
+      <p class="alert alert-success">
+        <%= notice %>
+      </p>
+    <% elsif alert %>
+      <p class="alert alert-success">
+        <%= notice %>
+      </p>
+    <% end %>
+    <%= yield %>
+  </div>
+
+</body>
+</html>
