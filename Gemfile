@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rest-client'
   gem 'pry'
+  gem 'dotenv-rails'
 end
 
 group :development do

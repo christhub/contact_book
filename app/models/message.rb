@@ -7,8 +7,8 @@ class Message < ActiveRecord::Base
     response = RestClient::Request.new(
         method: :post,
         url: 'https://api.twilio.com/2010-04-01/Accounts/ACee52a683252f9c29fe173e51e7aeb9cf/Messages.json',
-        user: 'ACee52a683252f9c29fe173e51e7aeb9cf',
-        password: 'ccc4d4f4b9f84daaff54e300121bc313',
+        user: ENV['TWILIO_ACCOUNT_SID'],
+        password: ENV['TWILIO_AUTH_TOKEN'],
         payload: {
                   Body: body,
                   From: from,
