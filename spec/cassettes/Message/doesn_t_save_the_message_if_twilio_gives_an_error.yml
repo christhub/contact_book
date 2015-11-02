@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACee52a683252f9c29fe173e51e7aeb9cf:ccc4d4f4b9f84daaff54e300121bc313@api.twilio.com/2010-04-01/Accounts/ACee52a683252f9c29fe173e51e7aeb9cf/Messages.json
+    body:
+      encoding: US-ASCII
+      string: Body=hello&From=9189927038&To=4086669559
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '40'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 02 Nov 2015 20:10:38 GMT
+      Twilio-Request-Duration:
+      - '0.344'
+      Twilio-Request-Id:
+      - RQd41d70f9a1434bf2987b4108fdf148d0
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '338'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"code": 21608, "message": "The number +14086669559 is unverified.
+        Trial accounts cannot send messages to unverified numbers; verify +14086669559
+        at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number
+        to send messages to unverified numbers.", "more_info": "https://www.twilio.com/docs/errors/21608",
+        "status": 400}'
+    http_version: 
+  recorded_at: Mon, 02 Nov 2015 20:10:38 GMT
+recorded_with: VCR 3.0.0
