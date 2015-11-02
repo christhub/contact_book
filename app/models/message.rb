@@ -16,7 +16,9 @@ class Message < ActiveRecord::Base
                     To: to
           }
         ).execute
-    rescue
+    rescue Exception => e
+      message = JSON.parse(e.response)['message']
+      errors.add(:base, message)
       false
     end
   end
