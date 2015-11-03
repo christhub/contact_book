@@ -20,7 +20,11 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.from = our_number
-
+    conversation_params[:to].each do |contact_id|
+  binding.pry
+      contact = Contact.find(contact_id)
+      @message.contacts.push(contact)
+    end
     if @message.save
       flash[:notice] = "Your message was sent!"
       redirect_to messages_path
@@ -33,6 +37,10 @@ class MessagesController < ApplicationController
 private
 
   def message_params
-    params.require(:message).permit(:to, :from, :body)
+    params.require(:message).permit(:from, :body)
+  end
+
+  def conversation_params
+    params.permit(to: [])
   end
 end

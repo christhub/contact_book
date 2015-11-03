@@ -1,5 +1,8 @@
 <% if params[:new_number] == "true" %>
-  $('#number-select').html("<%= j render(partial: 'number_field', locals: {f: params[:f]})  %>")
+  $('.number-select').last().html("<%= j render(partial: 'number_field', locals: {f: params[:f]})  %>")
+<% elsif params[:new_contact] == "true" %>
+  $('.number-select').children('a').remove();
+  $('#numbers').append("<%= j render(partial: 'contact_field', locals: {f: params[:f]})  %>")
 <% else %>
   $('#send-text').html("<%= j render(partial: 'contacts/textForm') %>")
 <% end %>
