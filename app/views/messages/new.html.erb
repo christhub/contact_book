@@ -1,12 +1,13 @@
 <div class="col-md-9">
   <%= form_for @message do |f| %>
-    <div class="form-group">
+    <div class="form-group" id="number-select">
       <%= f.label :to, class: 'pull-left' %>
-      <%= f.text_field :to, class: "form-control" %>
+      <%= f.collection_select :to, Contact.all, :number, :name, { class: "form-control" }  %>
+      <%= link_to "Contact Not Here?", new_message_path(new_number: true), locals: {f: f}, remote: true %>
     </div>
     <div class="form-group">
       <%= f.label :from, class: 'pull-left'  %>
-      <%= f.text_field :from, class: "form-control" %>
+      <%= f.text_field :from, value: our_number, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :body, class: 'pull-left'  %>

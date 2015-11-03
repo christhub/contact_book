@@ -1,0 +1,8 @@
+<h2><%= @contact.name %></h2>
+<h3><%= @contact.number %></h3>
+
+<p>
+  <div id="send-text">
+    <%= link_to 'send a text', new_message_path(contact: @contact), remote: true %>
+  </div>
+</p>

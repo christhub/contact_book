@@ -1,0 +1,18 @@
+<h2>Contacts</h2>
+
+<%= link_to "Add a Contact", new_contact_path, remote: true, class: "btn btn-default" %>
+<br>
+<br>
+<div id="new-contact-form">
+
+</div>
+
+<ul class="list-group col-md-7">
+  <% @contacts.each do |contact| %>
+    <li class="list-group-item">
+      <%= link_to contact_path(contact) do %>
+        <%= contact.last_name %>, <%= contact.first_name %> - <%= contact.number %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

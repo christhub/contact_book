@@ -2,7 +2,8 @@
 http_interactions:
 - request:
     method: post
-    uri: https://ACee52a683252f9c29fe173e51e7aeb9cf:ccc4d4f4b9f84daaff54e300121bc313@api.twilio.com/2010-04-01/Accounts/ACee52a683252f9c29fe173e51e7aeb9cf/Messages.json
+    uri: https://<twilio account sid>:<twilio auth token>@api.twilio.com/2010-04-01/Accounts/<twilio
+      account sid>/Messages.json
     body:
       encoding: US-ASCII
       string: Body=hello&From=9189927038&To=4086669559
@@ -36,11 +37,11 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 02 Nov 2015 20:10:38 GMT
+      - Mon, 02 Nov 2015 21:54:09 GMT
       Twilio-Request-Duration:
-      - '0.344'
+      - '0.446'
       Twilio-Request-Id:
-      - RQd41d70f9a1434bf2987b4108fdf148d0
+      - RQd0944084e55e4012ade474f2fa56c39e
       X-Powered-By:
       - AT-5000
       X-Shenanigans:
@@ -57,5 +58,5 @@ http_interactions:
         to send messages to unverified numbers.", "more_info": "https://www.twilio.com/docs/errors/21608",
         "status": 400}'
     http_version: 
-  recorded_at: Mon, 02 Nov 2015 20:10:38 GMT
+  recorded_at: Mon, 02 Nov 2015 21:54:09 GMT
 recorded_with: VCR 3.0.0

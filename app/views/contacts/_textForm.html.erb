@@ -1,0 +1,10 @@
+<div class="col-md-9">
+  <%= form_for Message.new do |f| %>
+    <%= f.hidden_field :to, value: @contact.number %>
+  <div class="form-group">
+    <%= f.label :body, class: 'pull-left'  %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+  <%= f.submit 'Go', class: "btn btn-lg btn-default pull-right" %>
+  <% end %>
+</div>
